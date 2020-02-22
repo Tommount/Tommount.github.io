@@ -399,7 +399,7 @@
        <p>It’s really a classical movie, I wish you will enjoying it. </p>
        <img id="Ryan" src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike220%2C5%2C5%2C220%2C73/sign=d474ee9ecafcc3cea0cdc161f32cbded/d833c895d143ad4b4277247c80025aafa40f0634.jpg"width="300" height="210">
 
-<h2 id=" twenty-third "><em> twenty-third post</em></h2>
+<h2 id="twenty-third"><em> twenty-third post</em></h2>
     <h5>Posted on 2020/2/21</h5>    
             <p>In the short 54 years, there are four Roman emperors came and gone.</p>
             <p>Are they really that notorious?</p>
@@ -411,115 +411,12 @@
         <img id="Tiberius" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Tiberius_palermo.jpg/220px-Tiberius_palermo.jpg" width="200" height="180"> <img id="Caligula" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gaius_Caesar_Caligula.jpg/220px-Gaius_Caesar_Caligula.jpg" width="200" height="180"> 
         <img id="Claudius" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Drusus_l%27ancien_Rome_augGP2014.jpg/640px-Drusus_l%27ancien_Rome_augGP2014.jpg" width="200" height="180"> <img id="Nero" src="https://cdn.britannica.com/70/146770-050-C7B66E4F/Bust-emperor-Roman-Nero.jpg" width="200" height="180">            
     
- <h2 id=" twenty-fourth "><em> twenty-fourth post</em></h2>
+ <h2 id="twenty-fourth"><em> twenty-fourth post</em></h2>
     <h5>Posted on 2020/2/22</h5>
          <p>Today I made a game by myself! It's based on my JavaScript lessons on Khan Academy.</p>
-     <script>var Beaver = function(x, y) {
-        this.x = x;
-        this.y = y;
-        this.img = getImage("avatars/mr-pants");
-        this.sticks = 0;
-    };
-
-Beaver.prototype.draw = function() {
-    fill(255, 0, 0);
-    this.y = constrain(this.y, 0, height-50);
-    image(this.img, this.x, this.y, 40, 40);
-  };
-
-Beaver.prototype.hop = function() {
-    this.img = getImage("avatars/mr-pants-with-hat");
-    this.y -= 5;
-};
-
-Beaver.prototype.fall = function() {
-    this.img = getImage("avatars/mr-pants");
-    this.y += 5;
-};
-var Score=0;
-Beaver.prototype.checkForStickGrab = function(stick) {
-    if ((stick.x >= this.x && stick.x <= (this.x + 40)) &&
-        (stick.y >= this.y && stick.y <= (this.y + 40))) {
-        stick.y = -400;
-        this.sticks++;
-        Score++;
-      }
-};
-var Stick = function(x, y) {
-    this.x = x;
-    this.y = y;
-};
-Stick.prototype.draw = function() {
-    fill(99, 78, 3);
-    rectMode(CENTER);
-    rect(this.x, this.y, 5, 40);
-};
-var sticks = [];
-for (var i = 0; i < 60; i++) {  
-    sticks.push(new Stick(i * 40 + 300, random(20, 260)));
-}
-var beaver = new Beaver(200, 300);
-
-var grassXs = [];
-for (var i = 0; i < 25; i++) { 
-    grassXs.push(i*20);
-}
-
-draw = function() {
-       // static
-    background(227, 254, 255);
-    fill(130, 79, 43);
-    rectMode(CORNER);
-    rect(0, height*0.90, width, height*0.10);
-              
-    for (var i = 0; i < grassXs.length; i++) {
-        image(getImage("cute/GrassBlock"), grassXs[i], height*0.85, 20, 20);
-        grassXs[i] -= 1;
-        if (grassXs[i] <= -20) {
-            grassXs[i] = width;
-        }
-    }
-    
-    for (var i = 0; i < sticks.length; i++) {
-        sticks[i].draw();
-        beaver.checkForStickGrab(sticks[i]);
-        sticks[i].x -= 1;
-    }
-    
-    textSize(18);
-    text("Score: " + beaver.sticks, 20, 30);
-    
-    if (beaver.sticks/sticks.length >= 0.85) {
-        textSize(36);
-        text("YOU WIN!!!", 100, 240);
-    }
-    if(Score>30){
-    if (keyIsPressed && keyCode === UP) {
-        beaver.hop();
-    } 
-    
-    if (keyIsPressed && keyCode === DOWN) {
-        beaver.fall();
-    }
-    textSize(36);
-        text("LEVEL TWO ✨✨",90, 200
-    );                                
-    }
-    else{
-     if (keyIsPressed && keyCode === UP) {
-        beaver.hop();
-    } else
-          {
-        beaver.fall();
-    }   
-    textSize(36);
-        text("LEVEL ONE ✨", 100, 200);
-      }
-     beaver.draw();
-    };
-    </script>
+     
             
-<h2 id=" twenty-fifth "><em> twenty-fifth post</em></h2>
+<h2 id="twenty-fifth"><em> twenty-fifth post</em></h2>
     <h5>Posted on 2020/2/23</h5>
  
             </body>

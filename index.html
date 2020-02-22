@@ -63,7 +63,7 @@
             #contents{
                 background: rgb(219, 235, 255);
                 width:250px;
-                height:175px;
+                height:375px;
                 overflow:auto;
                 }
             #hopper{
@@ -143,7 +143,7 @@
         <div><body>
        <img src="https://www.kasandbox.org/programming-images/avatars/Hopper-jumping.gif" id="hopper">
             <h1><strong>Tom</strong>'s blog</h1>
-        <h6>tom(YueYuTong)</h6> 
+        <h6>Tom(YueYuTong)</h6> 
             
         <h2>Contents</h2>
         <div id="contents">
@@ -172,6 +172,7 @@
             <li><a href="#twenty-second">twenty-second post!</a></li>
              <li><a href="#twenty-third">twenty-third post!</a></li>
             <li><a href="#twenty-fourth">twenty-fourth post!</a></li>
+            <li><a href="#twenty-fifth">twenty-fifth post!</a></li>
         
             </ul>
         </div>
@@ -407,10 +408,120 @@
             <p>Tiberius, Caligula, Claudius and Nero, the four controversial emperors in the Roman history, their stories are in the book <em><strong>The Story of The Romans Ⅶ Notorious Emperors</strong></em>  which I finished reading today!</p>
             <p>Actually, I think Tiberius and Claudius are not so bad, it’s just Tiberius is too cold to people and Claudius is too cowardly, so people thought they are bad. This also shows that it’s not easy being an emperor.</p>
             <p>I discovered something as well——in history, many emperors who has talent in art don’t have talent in ruling an empire, like Nero who was good at music, and Li Yu in China who was good at writing poems.</p>
- <img id="Tiberius" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Tiberius_palermo.jpg/220px-Tiberius_palermo.jpg" width="200" height="180"> <img id="Caligula" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gaius_Caesar_Caligula.jpg/220px-Gaius_Caesar_Caligula.jpg" width="200" height="180"> 
- <img id="Claudius" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Drusus_l%27ancien_Rome_augGP2014.jpg/640px-Drusus_l%27ancien_Rome_augGP2014.jpg" width="200" height="180"> <img id="Nero" src="https://cdn.britannica.com/70/146770-050-C7B66E4F/Bust-emperor-Roman-Nero.jpg" width="200" height="180">            
-  <h2 id=" twenty-fourth "><em> twenty-fourth post</em></h2>
-    <h5>Posted on 2020/2/22</h5>                                                             
+        <img id="Tiberius" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Tiberius_palermo.jpg/220px-Tiberius_palermo.jpg" width="200" height="180"> <img id="Caligula" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Gaius_Caesar_Caligula.jpg/220px-Gaius_Caesar_Caligula.jpg" width="200" height="180"> 
+        <img id="Claudius" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Drusus_l%27ancien_Rome_augGP2014.jpg/640px-Drusus_l%27ancien_Rome_augGP2014.jpg" width="200" height="180"> <img id="Nero" src="https://cdn.britannica.com/70/146770-050-C7B66E4F/Bust-emperor-Roman-Nero.jpg" width="200" height="180">            
+    
+ <h2 id=" twenty-fourth "><em> twenty-fourth post</em></h2>
+    <h5>Posted on 2020/2/22</h5>
+         <p>Today I made a game by myself! It's based on my JavaScript lessons on Khan Academy.</p>
+     <script>var Beaver = function(x, y) {
+        this.x = x;
+        this.y = y;
+        this.img = getImage("avatars/mr-pants");
+        this.sticks = 0;
+    };
+
+Beaver.prototype.draw = function() {
+    fill(255, 0, 0);
+    this.y = constrain(this.y, 0, height-50);
+    image(this.img, this.x, this.y, 40, 40);
+  };
+
+Beaver.prototype.hop = function() {
+    this.img = getImage("avatars/mr-pants-with-hat");
+    this.y -= 5;
+};
+
+Beaver.prototype.fall = function() {
+    this.img = getImage("avatars/mr-pants");
+    this.y += 5;
+};
+var Score=0;
+Beaver.prototype.checkForStickGrab = function(stick) {
+    if ((stick.x >= this.x && stick.x <= (this.x + 40)) &&
+        (stick.y >= this.y && stick.y <= (this.y + 40))) {
+        stick.y = -400;
+        this.sticks++;
+        Score++;
+      }
+};
+var Stick = function(x, y) {
+    this.x = x;
+    this.y = y;
+};
+Stick.prototype.draw = function() {
+    fill(99, 78, 3);
+    rectMode(CENTER);
+    rect(this.x, this.y, 5, 40);
+};
+var sticks = [];
+for (var i = 0; i < 60; i++) {  
+    sticks.push(new Stick(i * 40 + 300, random(20, 260)));
+}
+var beaver = new Beaver(200, 300);
+
+var grassXs = [];
+for (var i = 0; i < 25; i++) { 
+    grassXs.push(i*20);
+}
+
+draw = function() {
+       // static
+    background(227, 254, 255);
+    fill(130, 79, 43);
+    rectMode(CORNER);
+    rect(0, height*0.90, width, height*0.10);
+              
+    for (var i = 0; i < grassXs.length; i++) {
+        image(getImage("cute/GrassBlock"), grassXs[i], height*0.85, 20, 20);
+        grassXs[i] -= 1;
+        if (grassXs[i] <= -20) {
+            grassXs[i] = width;
+        }
+    }
+    
+    for (var i = 0; i < sticks.length; i++) {
+        sticks[i].draw();
+        beaver.checkForStickGrab(sticks[i]);
+        sticks[i].x -= 1;
+    }
+    
+    textSize(18);
+    text("Score: " + beaver.sticks, 20, 30);
+    
+    if (beaver.sticks/sticks.length >= 0.85) {
+        textSize(36);
+        text("YOU WIN!!!", 100, 240);
+    }
+    if(Score>30){
+    if (keyIsPressed && keyCode === UP) {
+        beaver.hop();
+    } 
+    
+    if (keyIsPressed && keyCode === DOWN) {
+        beaver.fall();
+    }
+    textSize(36);
+        text("LEVEL TWO ✨✨",90, 200
+    );                                
+    }
+    else{
+     if (keyIsPressed && keyCode === UP) {
+        beaver.hop();
+    } else
+          {
+        beaver.fall();
+    }   
+    textSize(36);
+        text("LEVEL ONE ✨", 100, 200);
+      }
+     beaver.draw();
+    };
+    </script>
+            
+<h2 id=" twenty-fifth "><em> twenty-fifth post</em></h2>
+    <h5>Posted on 2020/2/23</h5>
+ 
             </body>
     </div>
 </html>

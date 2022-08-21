@@ -1,0 +1,193 @@
+#body{
+	margin-left:100px;
+	margin-right:100px;
+}
+h2{
+	font-family:fantasy;
+	font-style:italic; 
+	color:rgb(139, 131, 199);
+	font-size:45px;
+	background-color:rgb(34, 209, 174);
+   }
+h1{
+  text-align:center;
+  font-size:60px;
+  font-weight:bold;  
+  color:rgb(204, 103, 49);
+  } 
+#back-to-the-top{
+  float:right; position:fixed;
+   }
+h6{ 
+	text-align:center;
+}
+p{
+	font-size:20px;
+}
+#pfdsj{
+	margin-right:2px;
+	margin-bottom: 10px;
+	border:6px ridge rgb(145,0,0);           
+}
+#fp{
+	float:right;
+	width:77%;
+	clear:both;  
+	margin-bottom:10px;
+}
+h3.logion_t{
+  font-style:italic; 
+  color:rgb(105,105,21);
+  float:right;
+  margin-right:100px;
+}
+h3{
+	font-style:italic; 
+	color:rgb(105,105,21);
+}
+a{
+	text-decoration:none;
+}           
+#ks{
+  border:6px  ridge rgb(145,0,0); 
+  float:left;
+  margin-right:100px;
+}
+#logion{
+font-family:"Papyrus",fantasy;
+line-height:3em;
+}
+#contents{
+	background: rgb(219, 235, 255);
+	width:250px;
+	height:375px;
+	overflow:auto;
+	}
+#poem{
+font-family:"HGHUATI_CNKI","Brush Script MT",cursive;
+}
+#water{
+  border:6px  ridge rgb(145,0,0);
+}
+#Hobbit{
+	margin-right:2px;
+	margin-bottom: 10px;
+	border: 6px ridge rgb(250, 209, 3);
+}
+#Holmes{
+	border:6px ridge rgb(158, 158, 158);
+}
+#Caesar{
+	border:6px ridge rgb(145,0,0);
+	clear:both;
+}
+ #climb{
+	border:6px ridge rgb(145,0,125);
+	}
+#Augustus{
+	border:6px ridge rgb(145,0,0);
+}
+#aircannon{
+	border:6px ridge rgb(62, 181, 78);
+}
+#bridge{
+   margin-right:3px;
+   margin-bottom: 12px;
+   border:6px ridge rgb(125,125,0); 
+}
+#twenty{
+   float:right;
+	width:75%; 
+	margin-bottom:10px;
+}
+#thief{
+   border:6px ridge rgb(145,0,0);
+}
+#Ryan{
+   border:6px ridge rgb(125,125,125);
+}
+#Tiberius{
+   border:6px ridge rgb(145,0,0);
+
+}
+#Caligula{
+  border:6px ridge rgb(145,0,0);
+  float:right;
+}
+#Claudius{
+  border:6px ridge rgb(145,0,0);
+
+}
+#Nero{
+  border:6px ridge rgb(145,0,0);
+  float:right;
+}
+#twenty-five{
+   float:right;
+   width:75%; 
+   margin-bottom:10px;
+}
+#1929{
+  border:6px ridge rgb(125,125,125);
+}
+#movie{
+  border:6px ridge rgb(145,0,0);
+}
+#Galba{
+   border:6px ridge rgb(145,0,0);
+}
+#Otho{
+  border:6px ridge rgb(145,0,0);
+}
+#Vitellius{
+  border:6px ridge rgb(145,0,0);
+}
+#Vespasianus{
+  border:6px ridge rgb(145,0,0);
+  
+}
+
+#Titus{
+  border:6px ridge rgb(145,0,0);
+  
+}
+#Domitianus{
+  border:6px ridge rgb(145,0,0);
+  
+}
+#sense{
+  border:6px ridge rgb(145,0,0);
+}
+#air-video{
+  overflow-y: hidden;
+}
+#golden-water{
+ border: 6px ridge rgb(250, 209, 3);
+}
+ #universe{
+ border: 6px ridge rgb(125,125,0);
+}
+#Mars{
+ border: 6px ridge rgb(145,10,10);
+}
+ #The-King¡¯s-Choice{
+ border: 6px ridge rgb(125,125,125);
+}
+#time-poem{
+font-family:"HGHUATI_CNKI","Brush Script MT",cursive;
+}
+#Statesmen{
+ border:6px ridge rgb(145,0,0);
+}
+#time{
+ border:6px ridge rgb(145,0,0);
+}
+#Star-Wars{
+ border:6px ridge rgb(145,0,0);
+}
+#Lord-of-the-Rings{
+ border:6px ridge rgb(250, 209, 3);
+}
+#noodle-making-machine{
+ border:6px ridge rgb(62, 181, 78);
+}

@@ -9,6 +9,10 @@ h2{
 	font-size:45px;
 	background-color:rgb(34, 209, 174);
    }
+#date{
+	font-size:10px;
+	color:rgb(0,0,0);
+}
 h1{
   text-align:center;
   font-size:60px;
@@ -170,7 +174,7 @@ font-family:"HGHUATI_CNKI","Brush Script MT",cursive;
 #Mars{
  border: 6px ridge rgb(145,10,10);
 }
- #The-King¡¯s-Choice{
+ #The-KingÂ¡Â¯s-Choice{
  border: 6px ridge rgb(125,125,125);
 }
 #time-poem{

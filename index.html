@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <title>Tom's Diaries</title>
-		<embed src="/Chopin.mp3" hidden="true" autostart="true" loop="true">
         <link rel="stylesheet" type="text/css" href="/main.css">
 		<style type="text/css">
 		audio{
@@ -12,7 +11,7 @@
 		</style>
         </head>
         <body>
-		<audio autoplay="autoplay"  controls="controls" loop="loop" preload="auto" src="/Chopin.mp3"></audio>
+		<audio id="audio" autoplay="autoplay"  controls="controls" loop="loop" preload="auto" src="/Chopin.mp3"></audio>
         <a href="#TITLE"><img id="back-to-the-top" src="https://static.thenounproject.com/png/138547-200.png" width="80" height="80"></a>
         <div id="body">
         <h1 id="TITLE"><strong>Tom</strong>'s diaries</h1>
@@ -28,6 +27,7 @@
 		</div>
 </body>
     <script>
+	    var audio = document.getElementById("audio");
 		window.onclick=function(){
 			audio.play();
 		}
